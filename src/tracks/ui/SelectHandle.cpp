@@ -9,6 +9,7 @@ Paul Licameli split from TrackPanel.cpp
 **********************************************************************/
 
 #include "../../Audacity.h"
+#include <wx/msgdlg.h>
 #include "SelectHandle.h"
 
 #include "../../Experimental.h"
@@ -594,7 +595,7 @@ UIHandle::Result SelectHandle::Click
 
    mSelectionBoundary = 0;
 
-   bool bShiftDown = event.ShiftDown();
+   bool bShiftDown = !event.ShiftDown();
    bool bCtrlDown = event.ControlDown();
 
    mSelStart = mUseSnap ? mSnapStart.outTime : mSnapStart.timeSnappedTime;
