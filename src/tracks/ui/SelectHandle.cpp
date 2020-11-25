@@ -1218,6 +1218,10 @@ void SelectHandle::AssignSelection
       sel0 = selend;
    }
 
+   std::cout <<std::endl << "SelectHandle::Drag" <<std::endl;
+   std::cout << "mSelStart=" << mSelStart << std::endl;
+   std::cout << "selend=" << selend << std::endl;
+
    viewInfo.selectedRegion.setTimes(sel0, sel1);
 }
 
